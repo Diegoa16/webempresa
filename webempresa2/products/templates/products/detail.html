@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <br><br>
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{product.image.url}}" alt="">
+                </div>
+                {% for image in images %}
+                <div class="swiper-slide">
+                  <img src="{{image.image.url}}" alt="">
+                </div>
+                {% endfor %}
+                <!--<div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                </div>-->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{product.productname}}</h3>
+              <ul>
+                <li><strong>Categoría</strong>: {{product.categories}}</li>
+                {% if product.price %}
+                <li><strong>Precio:COP $ </strong>{{product.price}}</li>
+                 {% endif %}
+                {% if product.cantidad > 0 %}
+                <li><span><strong>Unidades disponibles: {{product.cantidad}}</strong></span></li>
+                 {% else %}
+                 <li class="otro"><strong>Disponible bajo pedido </strong></li>
+                 {% endif %}
+                 <br>
+                 <li><strong>Comprar en:</strong></li>
+                 <div class="row gy-4">
+                    <br>
+                    <button class="button1"><a href="{% url 'contact' %}" target="_blank">Meteoagro <br>(5% descuento!)</a></button>
+                    {% if product.url %}
+                    <br>
+                      <button class="button1"><a href="{{product.url}}" target="_blank">Mercadolibre</a></button>
+                    {% endif %}
+                      
+                    
+                </div>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Descripción</h2>
+              <p>
+                {{product.description|safe}}
+              </p>
+              {% if product.pdf %}
+            <button class="button1"><a href="{{product.pdf.url}}" target="_blank">Ficha Técnica</a></button>
+            {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+{% endblock %}

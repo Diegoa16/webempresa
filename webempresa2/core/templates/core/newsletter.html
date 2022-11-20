@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main id="main">
+{% if user.is_authenticated %} 
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>METEOAGRO SAS</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li>Newsletter</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <!--<img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">-->
+              </div>
+
+              <h2 class="entry-title">
+                <a href="">NUEVO NEWSLETTER</a>
+              </h2>
+
+              <!--<div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>-->
+
+              <div class="entry-content">
+                <p></p>
+                <head>
+                 <div class="content-section">
+                        <form action="{% url 'newsletter' %}" method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy  }}
+                            {{ form.media  }}
+                            {{ form.description }}
+                            <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </head>
+              </div>
+            </article><!-- End blog entry -->
+
+            
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+{% endif %}
+  </main><!-- End #main -->
+
+{% endblock content %}

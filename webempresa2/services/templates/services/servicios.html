@@ -1,0 +1,40 @@
+<!-- Contenido-->
+    {% extends 'core/base.html' %}
+    {% load static %}
+
+    {% block title %}
+
+    <title>Servicios | Meteoagro SAS</title>
+
+    {% endblock %}
+
+     {% block content%}
+
+                
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+             {% for servicio in servicios %}
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{servicio.image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ servicio.servicename }}</h5>
+                             
+                                    <button data-product="{{ servicio.id }}" class="btn btn-primary2">
+                                    <a href="{% url 'detalle' servicio.id %}" class="t">Ver más</a>
+                                    </button>
+                                   <hr>
+                                    
+                        </div>
+                </div>
+    
+              {% endfor %}
+            </div>
+            
+        </div>
+        
+     </section>           
+    
+
+{% endblock %}
+

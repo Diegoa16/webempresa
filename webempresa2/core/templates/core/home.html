@@ -1,0 +1,168 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url({% static 'core/img/slide/slide-11.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Meteoagro <span>SAS</span></h2>
+              <p class="animate__animated animate__fadeInUp">Desarrollos meteorológicos para el agro y el ambiente</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Leer Más</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url({% static 'core/img/slide/slide-12.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Monitoreo en tiempo real</h2>
+              <p class="animate__animated animate__fadeInUp">Proveemos soluciones costo-efectivas para el monitoreo meteorológico y agrometeorológico</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Leer Más</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url({% static 'core/img/slide/slide-13.jpg' %})">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Gestión de la información agrometeorológica</h2>
+              <p class="animate__animated animate__fadeInUp">Proveemos soluciones costo-efectivas para el manejo de la información, desde que el dato es generado hasta su utilización por el usuario final.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Leer Más</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2></h2>
+            <h3><strong>¿Necesitas una solución costo-efectiva para el monitoreo meteorológico o agrometeorológico?</strong></h3> 
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Contamos con experiencia en la venta de equipos e instrumentación para mediciones meteorológicas,
+              asesoría en instalación de estaciones meteorológicas (siguiendo lineamientos internacionales),
+              transmisión de datos, consulta y descarga de los datos y análisis de información.
+              Contamos con un servicio post venta y soporte técnico especializado, así como toda la línea y
+              disponibilidad inmediata de repuestos originales. Nuestras fortalezas son:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Monitoreo meteorológico, agrometeorológico y ambiental</li>
+              <li><i class="ri-check-double-line"></i> Monitoreo en invernaderos de variables como humedad del aire, temperatura del aire, radiación solar, dirección y velocidad del viento</li>
+              <li><i class="ri-check-double-line"></i> Medición y monitoreo de la precipitación, y variables como la humedad del suelo</li>
+            </ul>
+            <p class="fst-italic">
+              Si tiene alguna necesidad puntual, pregúntenos!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-11.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-12.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-13.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-14.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-15.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'core/img/clients/client-16.png' %}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!--======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <i class="bi bi-gear"></i>
+              <h4><a href="#">Funcionalidad</a></h4>
+              <p>Nuestras soluciones son prácticas y funcionales, se ajustan a la medida de sus necesidades y presupuestos.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-currency-dollar"></i>
+              <h4><a href="#">Costo-efectividad</a></h4>
+              <p>Ofrecemos productos y servicios con la mejor relación costo-beneficio del mercado.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-truck"></i>
+              <h4><a href="#">Envíamos</a></h4>
+              <p>Enviamos nuestros productos a toda Colombia y Latinoamérica de forma ágil y puntual.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="bi bi-tools"></i>
+              <h4><a href="#">Fabricamos</a></h4>
+              <p>Entendemos la importancia de aportar al desarrollo y crecimiento del país, por lo que algunos de nuestros productos y partes son de manufactura local.</p>
+            </div>
+          </div>
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
+
+  

@@ -5,7 +5,7 @@ from .forms import CityForm
 
 # Create your views here.
 def weather(request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&lang=es&appid=83c0124abb5767aa394c3a76e06f810c'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&lang=es&appid='
 
     cities = City.objects.all() #return all the cities in the database
 
